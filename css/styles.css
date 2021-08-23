@@ -1,0 +1,203 @@
+/* Project configuration */
+:root {
+  --color-primary: #6C63FF;
+  --color-primary-light: #9793e7;
+  --color-primary-dark: rgb(32, 3, 117);
+  --color-muted: #d3d3d3;
+  --font-primary: "Poppins"
+}
+
+@font-face {
+	font-family: "Poppins";
+	src: url("../fonts/Poppins-Regular.ttf");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Poppins";
+	src: url("../fonts/Poppins-Bold.ttf");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+html {
+  font-family: var(--font-primary);
+}
+/* Header */
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 1em;
+}
+
+/* General */
+.layout-container {
+  background-image: url("../img/blob.svg"), url("../img/blob.svg");
+  background-repeat: no-repeat;
+  background-position: right -100px bottom -60px, left -150px bottom 70px;
+  background-size: 190px;
+  align-items:center;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 50px 1em;
+}
+
+.login, .form {
+  max-width: 500px;
+  width: 100%;
+}
+
+.login__image {
+  max-width: 100%;
+  margin-bottom: 30px;
+}
+
+.login__title {
+  letter-spacing: 0.2rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.login__subtitle {
+  margin-top: 0;
+  margin-bottom: 50px;
+  text-align: center;
+  color: var(--color-primary-light);
+}
+
+/* Buttons */
+.login__button {
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-weight: 700;
+  padding: 0.725em 2em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  width: 100%;
+}
+
+* + .login__button {
+  margin-top: 15px;
+}
+
+.login__button:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+.login__button--state-inverse {
+  background-color: #fff;
+  color: var(--color-primary);
+}
+
+.login__button--state-inverse:hover {
+  background-color: var(--color-muted);
+}
+
+.login__button--simple {
+  border: 0;
+  background-color: rgba(0,0,0,0);
+  color: var(--color-primary);
+  font-size: 0.8rem;
+}
+
+.login__button--simple:hover {
+  color: var(--color-primary-dark);
+  background-color: rgba(0,0,0,0);
+}
+
+/* Forms */
+
+.form__title {
+  font-size: 2.125rem;
+  letter-spacing: 0.2rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.form__subtitle {
+  color: var(--color-primary-light);
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 50px;
+  letter-spacing: 0.1rem;
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+}
+
+* + .form__group {
+  margin-top: 20px;
+}
+
+.form__label {
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.form__input { 
+  border: 0;
+  border-bottom: 2px solid var(--color-muted);
+  padding: 1em 0.5em;
+  transition: all 0.5s;
+}
+
+.form__input:focus {
+  border-color: var(--color-primary);
+  outline: 0;
+}
+
+.form button {
+  margin-top: 50px;
+}
+
+.options-separator {
+  color: var(--color-primary-dark);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  position: relative;
+}
+
+.options-separator span {
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+  padding: 0 1em;
+}
+
+.options-separator::after {
+  content: '';
+  background-color: var(--color-muted);
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+
+@media screen and (min-width: 1024px) {
+  .layout-container {
+    background-position: right -150px bottom -150px, left -300px bottom 70px;
+    background-size: 600px;
+  }
+}
